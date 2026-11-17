@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# data and run outputs (never commit competition data)
+data/
+train_output/
+runs/
+submission.csv
+*.zip
+
+# organizers' report template (provided by the organizers; not part of this code release)
+template/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz

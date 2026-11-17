@@ -1,0 +1,12 @@
+# Versions the code was verified with (Python 3.13.3, Windows 11, NVIDIA RTX 4060 Laptop GPU, CUDA 12.4 wheels).
+# For a CUDA build install torch/torchvision from https://download.pytorch.org/whl/cu124 ; CPU works too.
+torch==2.6.0
+torchvision==0.21.0
+numpy==2.3.5
+opencv-python-headless==5.0.0.93
+pycocotools==2.0.11
+pandas==3.0.2
+tqdm==4.67.3
+matplotlib==3.10.9
+ipykernel==7.2.0
+nbformat==5.10.4
