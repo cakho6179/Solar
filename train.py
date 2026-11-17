@@ -15,16 +15,19 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import sys
 import time
 from pathlib import Path
 
-import numpy as np
-import torch
-from torch.utils.data import DataLoader
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))  # library modules live in src/
 
-from data import CROP_SIZE, SolarFilamentCropDataset, load_instances_by_stem, split_stems
-from losses import FilamentLoss
-from model import FilamentResNet34UNet
+import numpy as np  # noqa: E402
+import torch  # noqa: E402
+from torch.utils.data import DataLoader  # noqa: E402
+
+from data import CROP_SIZE, SolarFilamentCropDataset, load_instances_by_stem, split_stems  # noqa: E402
+from losses import FilamentLoss  # noqa: E402
+from model import FilamentResNet34UNet  # noqa: E402
 
 SEED = 2026
 

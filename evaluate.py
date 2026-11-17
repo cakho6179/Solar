@@ -9,14 +9,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-import cv2
-import torch
-from tqdm import tqdm
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))  # library modules live in src/
 
-from data import load_gt_rles, load_instances_by_stem, split_stems
-from pipeline import InferenceConfig, evaluate, load_trained_model, predict_probability, extract_instances, rles_from_masks
+import cv2  # noqa: E402
+import torch  # noqa: E402
+from tqdm import tqdm  # noqa: E402
+
+from data import load_gt_rles, load_instances_by_stem, split_stems  # noqa: E402
+from pipeline import InferenceConfig, evaluate, load_trained_model, predict_probability, extract_instances, rles_from_masks  # noqa: E402
 
 
 def main() -> None:

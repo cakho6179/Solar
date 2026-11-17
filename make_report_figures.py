@@ -10,10 +10,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-import cv2
-import matplotlib
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))  # library modules live in src/
+
+import cv2  # noqa: E402
+import matplotlib  # noqa: E402
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402

@@ -6,14 +6,17 @@
 from __future__ import annotations
 
 import argparse
+import sys
 import time
 from pathlib import Path
 
-import torch
-from tqdm import tqdm
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))  # library modules live in src/
 
-from data import list_images
-from pipeline import InferenceConfig, load_trained_model, print_checks, run_inference, validate_submission
+import torch  # noqa: E402
+from tqdm import tqdm  # noqa: E402
+
+from data import list_images  # noqa: E402
+from pipeline import InferenceConfig, load_trained_model, print_checks, run_inference, validate_submission  # noqa: E402
 
 
 def main() -> None:
